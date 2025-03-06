@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido de Namoro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 32px;
+            color: #333;
+        }
+        .buttons {
+            margin-top: 30px;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .sim {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .nao {
+            background-color: #f44336;
+            color: white;
+        }
+        .nao.clicked {
+            position: relative;
+            left: -200px; /* Move o botão para fora de onde estava */
+            opacity: 0; /* Faz o botão desaparecer */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>QUER NAMORAR COMIGO?</h1>
+        <div class="buttons">
+            <button class="sim" onclick="irParaVideo()">Sim</button>
+            <button class="nao" onclick="moverNao()">Não</button>
+        </div>
+    </div>
+
+    <script>
+        function moverNao() {
+            // Quando clicar em "Não", move o botão "Não" para fora e esconde ele
+            const btnNao = document.querySelector('.nao');
+            btnNao.classList.add('clicked');
+        }
+
+        function irParaVideo() {
+            // Quando clicar em "Sim", redireciona para o vídeo do YouTube
+            window.location.href = "https://www.youtube.com/watch?v=c5AhH2EHovk"; // Link atualizado
+        }
+    </script>
+</body>
+</html>
+
